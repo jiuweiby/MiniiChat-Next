@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自适应图标前景层（108dp 画布，安全区为中间 72dp）。
+     补回迁移过程中丢失的 ic_launcher_foreground 资源，
+     用矢量替代原 PNG，零外部依赖、任意密度不失真。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 对话气泡主体：安全区内居中 -->
+    <path
+        android:fillColor="#2E7D5B"
+        android:pathData="M54,30
+            C68.36,30 80,40.07 80,52.5
+            C80,64.93 68.36,75 54,75
+            C50.29,75 46.77,74.31 43.6,73.07
+            L34,78.5
+            L36.2,68.6
+            C31.62,64.72 28,58.99 28,52.5
+            C28,40.07 39.64,30 54,30 Z" />
+
+    <!-- 气泡内三点，象征对话/思考 -->
+    <path
+        android:fillColor="#F7F0F1"
+        android:pathData="M43,50 m-3.2,0 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 Z" />
+    <path
+        android:fillColor="#F7F0F1"
+        android:pathData="M54,50 m-3.2,0 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 Z" />
+    <path
+        android:fillColor="#F7F0F1"
+        android:pathData="M65,50 m-3.2,0 a3.2,3.2 0 1,0 6.4,0 a3.2,3.2 0 1,0 -6.4,0 Z" />
+</vector>
