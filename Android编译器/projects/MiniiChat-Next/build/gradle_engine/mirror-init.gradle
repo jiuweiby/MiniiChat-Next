@@ -1,0 +1,31 @@
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+    }
+}
+
+settingsEvaluated { settings ->
+    settings.pluginManagement {
+        repositories {
+            clear()
+            maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+            maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+            maven { url 'https://maven.aliyun.com/repository/google/' }
+            maven { url 'https://maven.aliyun.com/repository/public/' }
+            maven { url 'https://mirrors.huaweicloud.com/repository/maven/' }
+        }
+    }
+}
+
+settingsEvaluated { settings ->
+    def drm = settings.dependencyResolutionManagement
+    drm.repositoriesMode.set(org.gradle.api.initialization.resolve.RepositoriesMode.PREFER_SETTINGS)
+    drm.repositories.clear()
+    drm.repositories.maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+    drm.repositories.maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+    drm.repositories.maven { url 'https://maven.aliyun.com/repository/google/' }
+    drm.repositories.maven { url 'https://maven.aliyun.com/repository/public/' }
+    drm.repositories.maven { url 'https://mirrors.huaweicloud.com/repository/maven/' }
+}
