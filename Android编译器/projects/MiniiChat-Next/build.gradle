@@ -1,0 +1,25 @@
+// @engine: gradle
+// MiniiChat-Next 顶层构建脚本（迁移自 AndroidIDEProjects/MiniiChat-Next-main）
+plugins {
+    id 'com.android.application' version '8.13.0' apply false
+    id 'org.jetbrains.kotlin.android' version '2.1.0' apply false
+    id 'org.jetbrains.kotlin.plugin.compose' version '2.1.0' apply false
+    id 'org.jetbrains.kotlin.plugin.serialization' version '2.1.0' apply false
+    id 'com.chaquo.python' version '16.1.0' apply false
+}
+// 国内镜像仓库
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://mirrors.huaweicloud.com/repository/maven/' }
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://chaquo.com/maven' }
+    }
+}
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
