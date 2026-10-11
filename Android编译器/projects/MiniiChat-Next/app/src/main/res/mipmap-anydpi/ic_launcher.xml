@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- API < 26 兜底图标（mipmap-anydpi 无版本限定，任何 SDK 都可用）。
+     原工程 mipmap-*dpi 下的 PNG 已丢失，这里用矢量合成一张普通图标，
+     保证 minSdk 24 设备上 @mipmap/ic_launcher 与 @mipmap/ic_launcher_round 均可解析。 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/ic_launcher_background" />
+    <item android:drawable="@drawable/ic_launcher_foreground" />
+</layer-list>
